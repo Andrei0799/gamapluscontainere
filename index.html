@@ -108,31 +108,17 @@ ghhvh<section id="oferta">
 
     <p>🚛 Livrare în toată România</p>
 
-</section>
+<input type="text" id="nume" placeholder="👤 Nume și prenume" required>
 
-<section id="configurator">
+<input type="tel" id="telefon" placeholder="📞 Telefon" required>
 
-<h2>📦 Configurează containerul tău</h2>
+<input type="text" id="judet" placeholder="📍 Județ">
 
-<form>
-
-<h3>Date client</h3>
-
-<input type="text" placeholder="👤 Nume și prenume" required><br><br>
-
-<input type="tel" placeholder="📞 Telefon" required><br><br>
-
-<input type="email" placeholder="📧 E-mail"><br><br>
-
-<input type="text" placeholder="📍 Județ"><br><br>
-
-<input type="text" placeholder="🏙️ Localitate"><br><br>
+<input type="text" id="localitate" placeholder="🏙️ Localitate">
 
 <h3>Container dorit</h3>
 
-<select>
-
-<option>Alege dimensiunea</option>
+<select id="dimensiune">
 
 <option>3 × 2.4 m</option>
 
@@ -148,6 +134,7 @@ ghhvh<section id="oferta">
 
 <option>Personalizat</option>
 
+</select>
 </select>
 
 <br><br>
@@ -238,7 +225,7 @@ ghhvh<section id="oferta">
 
 <a href="https://wa.me/40799415521" target="_blank">
 
-<button type="button">
+<button type="button" onclick="trimiteWhatsApp()">
 
 🟢 Primește oferta pe WhatsApp
 
