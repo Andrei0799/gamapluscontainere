@@ -21,43 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Gama PLUS Containere - Site încărcat cu succes!");
 
 });
-function trimiteWhatsApp() {
 
-const nume = document.getElementById("nume").value;
-
-const telefon = document.getElementById("telefon").value;
-
-const judet = document.getElementById("judet").value;
-
-const localitate = document.getElementById("localitate").value;
-
-const dimensiune = document.getElementById("dimensiune").value;
-
-const mesaj =
-
-`📦 CERERE NOUĂ DE OFERTĂ
-
-👤 Nume: ${nume}
-
-📞 Telefon: ${telefon}
-
-📍 Județ: ${judet}
-
-🏙️ Localitate: ${localitate}
-
-📏 Dimensiune: ${dimensiune}
-
-Trimis de pe site-ul GAMA PLUS Containere`;
-
-window.open(
-
-"https://wa.me/40799415521?text=" + encodeURIComponent(mesaj),
-
-"_blank"
-
-);
-
-}
 function trimiteWhatsApp() {
 
 const nume = document.getElementById("nume").value;
