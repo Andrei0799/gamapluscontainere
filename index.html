@@ -108,15 +108,19 @@ ghhvh<section id="oferta">
 
     <p>🚛 Livrare în toată România</p>
 
-<input type="text" id="nume" placeholder="👤 Nume și prenume" required>
+<section id="configurator">
 
-<input type="tel" id="telefon" placeholder="📞 Telefon" required>
+<h2>📦 Configurează containerul tău</h2>
+
+<input type="text" id="nume" placeholder="👤 Nume și prenume">
+
+<input type="tel" id="telefon" placeholder="📞 Telefon">
 
 <input type="text" id="judet" placeholder="📍 Județ">
 
 <input type="text" id="localitate" placeholder="🏙️ Localitate">
 
-<h3>Container dorit</h3>
+<h3>📏 Dimensiune</h3>
 
 <select id="dimensiune">
 
@@ -133,73 +137,26 @@ ghhvh<section id="oferta">
 <option>10 × 3 m</option>
 
 <option>Personalizat</option>
-<h3>💰 Care este bugetul tău?</h3>
-
-<select id="buget">
-
-    <option>Alege bugetul</option>
-
-    <option>Sub 15.000 lei</option>
-
-    <option>15.000 - 25.000 lei</option>
-
-    <option>25.000 - 40.000 lei</option>
-
-    <option>Peste 40.000 lei</option>
-
-    <option>Personalizat</option>
-<h3>📅 Când ai nevoie de container?</h3>
-
-<select id="termen">
-
-    <option>Alege perioada</option>
-
-    <option>Cât mai repede</option>
-
-    <option>În 7 zile</option>
-eu
-    <option>În 30 de zile</option>
-
-    <option>În 2-3 luni</option>
-
-    <option>În peste 3 luni</option>
-
-    <option>Doar mă interesez momentan</option>
-
-</select>
-</select>
-
-<br><br>
-
-<input type="number" id="bugetPersonalizat"
-
-placeholder="Introduceți bugetul dorit (lei sau €)">
-</select>
-</select>
-
-<br><br>
-
-<select>
-
-<option>Destinație</option>
-
-<option>Birou</option>
-
-<option>Locuință</option>
-
-<option>Depozit</option>
-
-<option>Șantier</option>
-
-<option>Spațiu comercial</option>
 
 </select>
 
-<br><br>
+<h3>🧱 Grosime panou</h3>
 
-<select>
+<select id="panou">
 
-<option>Culoare</option>
+<option>40 mm</option>
+
+<option>60 mm</option>
+
+<option>80 mm</option>
+
+<option>100 mm</option>
+
+</select>
+
+<h3>🎨 Culoare</h3>
+
+<select id="culoare">
 
 <option>Alb</option>
 
@@ -209,25 +166,47 @@ placeholder="Introduceți bugetul dorit (lei sau €)">
 
 </select>
 
-<br><br>
+<h3>🚪 Număr uși</h3>
 
-<label><input type="checkbox"> 🚿 Baie</label><br>
+<select id="usi">
 
-<label><input type="checkbox"> 🍳 Bucătărie</label><br>
+<option>1</option>
 
-<label><input type="checkbox"> ⚡ Instalație electrică</label><br>
+<option>2</option>
 
-<label><input type="checkbox"> 💡 Iluminat LED</label><br>
+<option>3</option>
 
-<label><input type="checkbox"> ❄️ Aer condiționat</label><br>
+</select>
 
-<label><input type="checkbox"> 🪵 Pardoseală Premium</label><br>
+<h3>🪟 Număr ferestre</h3>
 
-<label><input type="checkbox"> 🏡 Terasă</label><br><br>
+<select id="ferestre">
 
-<h3>💰 Care este bugetul?</h3>
+<option>1</option>
 
-<select>
+<option>2</option>
+
+<option>3</option>
+
+<option>4</option>
+
+</select>
+
+<h3>⚙️ Opțiuni</h3>
+
+<label><input type="checkbox" id="baie"> 🚿 Baie</label><br>
+
+<label><input type="checkbox" id="bucatarie"> 🍽️ Bucătărie</label><br>
+
+<label><input type="checkbox" id="electric"> ⚡ Instalație electrică</label><br>
+
+<label><input type="checkbox" id="ac"> ❄️ Aer condiționat</label><br>
+
+<label><input type="checkbox" id="terasa"> 🏡 Terasă</label><br>
+
+<h3>💰 Buget</h3>
+
+<select id="buget">
 
 <option>Sub 15.000 lei</option>
 
@@ -237,61 +216,37 @@ placeholder="Introduceți bugetul dorit (lei sau €)">
 
 <option>Peste 40.000 lei</option>
 
+<option>Personalizat</option>
+
 </select>
 
-<br><br>
+<input type="number" id="bugetPersonalizat" placeholder="Buget personalizat">
 
 <h3>📅 Când ai nevoie?</h3>
-<h3>⚙️ Opțiuni suplimentare</h3>
 
-<label><input type="checkbox" id="baie"> 🚿 Baie</label><br><br>
+<select id="termen">
 
-<label><input type="checkbox" id="bucatarie"> 🍽️ Bucătărie</label><br><br>
+<option>Cât mai repede</option>
 
-<label><input type="checkbox" id="electric"> ⚡ Instalație electrică</label><br><br>
+<option>În 7 zile</option>
 
-<label><input type="checkbox" id="ac"> ❄️ Aer condiționat</label><br><br>
+<option>În 30 zile</option>
 
-<label><input type="checkbox" id="terasa"> 🏡 Terasă</label><br><br>
+<option>În 2-3 luni</option>
 
-<label><input type="checkbox" id="mobilat"> 🛋️ Mobilat complet</label><br><br>
-
-<h3>🧱 Grosime panouri sandwich</h3>
-
-<select id="panou">
-
-    <option>40 mm</option>
-
-    <option>60 mm</option>
-
-    <option>80 mm</option>
-
-    <option>100 mm</option>
+<option>Peste 3 luni</option>
 
 </select>
-
-
-</select>
-
-<br><br>
 
 <h3>📝 Alte detalii</h3>
 
-<textarea id="detalii" rows="5" placeholder="Scrie aici toate cerințele tale..."></textarea>
-
-<br><br>
-
-
+<textarea id="detalii" rows="5"></textarea>
 
 <button type="button" onclick="trimiteWhatsApp()">
 
 🟢 Primește oferta pe WhatsApp
 
 </button>
-
-
-
-</form>
 
 </section>
 <footer>
