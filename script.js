@@ -34,11 +34,13 @@ const localitate = document.getElementById("localitate").value;
 
 const dimensiune = document.getElementById("dimensiune").value;
 
-const buget = document.getElementById("buget").value;
+const panou = document.getElementById("panou").value;
 
-const bugetPersonalizat = document.getElementById("bugetPersonalizat").value;
+const culoare = document.getElementById("culoare").value;
 
-const termen = document.getElementById("termen").value;
+const usi = document.getElementById("usi").value;
+
+const ferestre = document.getElementById("ferestre").value;
 
 const baie = document.getElementById("baie").checked ? "Da" : "Nu";
 
@@ -50,12 +52,14 @@ const ac = document.getElementById("ac").checked ? "Da" : "Nu";
 
 const terasa = document.getElementById("terasa").checked ? "Da" : "Nu";
 
-const mobilat = document.getElementById("mobilat").checked ? "Da" : "Nu";
+const buget = document.getElementById("buget").value;
 
+const bugetPersonalizat = document.getElementById("bugetPersonalizat").value;
 
+const termen = document.getElementById("termen").value;
 
 const detalii = document.getElementById("detalii").value;
-const panou = document.getElementById("panou").value;
+
 const mesaj = `📦 CERERE NOUĂ DE OFERTĂ
 
 👤 Nume: ${nume}
@@ -68,11 +72,13 @@ const mesaj = `📦 CERERE NOUĂ DE OFERTĂ
 
 📏 Dimensiune: ${dimensiune}
 
-💰 Buget: ${buget}
+🧱 Grosime panou: ${panou}
 
-💵 Buget personalizat: ${bugetPersonalizat}
+🎨 Culoare: ${culoare}
 
-📅 Termen: ${termen}
+🚪 Uși: ${usi}
+
+🪟 Ferestre: ${ferestre}
 
 🚿 Baie: ${baie}
 
@@ -84,9 +90,11 @@ const mesaj = `📦 CERERE NOUĂ DE OFERTĂ
 
 🏡 Terasă: ${terasa}
 
-🛋️ Mobilat: ${mobilat}
+💰 Buget: ${buget}
 
-🧱 Grosime panou: ${panou}
+💵 Buget personalizat: ${bugetPersonalizat}
+
+📅 Termen: ${termen}
 
 📝 Alte detalii:
 
