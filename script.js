@@ -88,12 +88,10 @@ const terasa = document.getElementById("terasa").checked ? "Da" : "Nu";
 
 const mobilat = document.getElementById("mobilat").checked ? "Da" : "Nu";
 
-const panou60 = document.getElementById("panou60").checked ? "Da" : "Nu";
 
-const panou80 = document.getElementById("panou80").checked ? "Da" : "Nu";
 
 const detalii = document.getElementById("detalii").value;
-
+const panou = document.getElementById("panou").value;
 const mesaj = `📦 CERERE NOUĂ DE OFERTĂ
 
 👤 Nume: ${nume}
@@ -124,7 +122,7 @@ const mesaj = `📦 CERERE NOUĂ DE OFERTĂ
 
 🛋️ Mobilat: ${mobilat}
 
-const panou = document.getElementById("panou").value;
+🧱 Grosime panou: ${panou}
 
 📝 Alte detalii:
 
