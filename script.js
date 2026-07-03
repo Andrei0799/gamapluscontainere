@@ -1,152 +1,103 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-    const butoane = document.querySelectorAll("a");
-
-    butoane.forEach(function (buton) {
-
-        buton.addEventListener("mouseenter", function () {
-
-            this.style.transform = "scale(1.05)";
-
-        });
-
-        buton.addEventListener("mouseleave", function () {
-
-            this.style.transform = "scale(1)";
-
-        });
-
-    });
-
-    console.log("Gama PLUS Containere - Site încărcat cu succes!");
+    calculeazaPret();
 
 });
 
-function trimiteWhatsApp() {
+function calculeazaPret() {
 
-const nume = document.getElementById("nume").value;
+    let pret = Number(document.getElementById("dimensiune").value);
 
-const telefon = document.getElementById("telefon").value;
+    pret += Number(document.getElementById("panou").value);
 
-const judet = document.getElementById("judet").value;
+    if(document.getElementById("baie").checked) pret += 600;
 
-const localitate = document.getElementById("localitate").value;
+    if(document.getElementById("bucatarie").checked) pret += 800;
 
-const dimensiune = document.getElementById("dimensiune").value;
+    if(document.getElementById("electric").checked) pret += 300;
 
-const panou = document.getElementById("panou").value;
+    if(document.getElementById("ac").checked) pret += 500;
 
-const culoare = document.getElementById("culoare").value;
+    if(document.getElementById("terasa").checked) pret += 900;
 
-const usi = document.getElementById("usi").value;
+    document.getElementById("pretFinal").innerHTML =
 
-const ferestre = document.getElementById("ferestre").value;
+        "💰 Preț estimativ: <strong>" +
 
-const baie = document.getElementById("baie").checked ? "Da" : "Nu";
+        pret.toLocaleString("ro-RO") +
 
-const bucatarie = document.getElementById("bucatarie").checked ? "Da" : "Nu";
+        " €</strong>";
 
-const electric = document.getElementById("electric").checked ? "Da" : "Nu";
+}
 
-const ac = document.getElementById("ac").checked ? "Da" : "Nu";
+function trimiteWhatsApp(){
 
-const terasa = document.getElementById("terasa").checked ? "Da" : "Nu";
+    calculeazaPret();
 
-const buget = document.getElementById("buget").value;
+    let pret = Number(document.getElementById("dimensiune").value);
 
-const bugetPersonalizat = document.getElementById("bugetPersonalizat").value;
+    pret += Number(document.getElementById("panou").value);
 
-const termen = document.getElementById("termen").value;
+    if(document.getElementById("baie").checked) pret += 600;
 
-const detalii = document.getElementById("detalii").value;
+    if(document.getElementById("bucatarie").checked) pret += 800;
 
-const mesaj = `📦 CERERE NOUĂ DE OFERTĂ
+    if(document.getElementById("electric").checked) pret += 300;
 
-👤 Nume: ${nume}
+    if(document.getElementById("ac").checked) pret += 500;
 
-📞 Telefon: ${telefon}
+    if(document.getElementById("terasa").checked) pret += 900;
 
-📍 Județ: ${judet}
+    const mesaj =
 
-🏙️ Localitate: ${localitate}
+`📦 CERERE OFERTĂ GAMA PLUS
 
-📏 Dimensiune: ${dimensiune}
+👤 Nume: ${document.getElementById("nume").value}
 
-🧱 Grosime panou: ${panou}
+📞 Telefon: ${document.getElementById("telefon").value}
 
-🎨 Culoare: ${culoare}
+📍 Județ: ${document.getElementById("judet").value}
 
-🚪 Uși: ${usi}
+🏙️ Localitate: ${document.getElementById("localitate").value}
 
-🪟 Ferestre: ${ferestre}
+📏 Dimensiune: ${document.getElementById("dimensiune").options[document.getElementById("dimensiune").selectedIndex].text}
 
-🚿 Baie: ${baie}
+🧱 Panou: ${document.getElementById("panou").options[document.getElementById("panou").selectedIndex].text}
 
-🍽️ Bucătărie: ${bucatarie}
+🎨 Culoare: ${document.getElementById("culoare").value}
 
-⚡ Instalație electrică: ${electric}
+🚪 Uși: ${document.getElementById("usi").value}
 
-❄️ Aer condiționat: ${ac}
+🪟 Ferestre: ${document.getElementById("ferestre").value}
 
-🏡 Terasă: ${terasa}
+🚿 Baie: ${document.getElementById("baie").checked ? "Da" : "Nu"}
 
-💰 Buget: ${buget}
+🍽️ Bucătărie: ${document.getElementById("bucatarie").checked ? "Da" : "Nu"}
 
-💵 Buget personalizat: ${bugetPersonalizat}
+⚡ Instalație electrică: ${document.getElementById("electric").checked ? "Da" : "Nu"}
 
-📅 Termen: ${termen}
+❄️ Aer condiționat: ${document.getElementById("ac").checked ? "Da" : "Nu"}
+
+🏡 Terasă: ${document.getElementById("terasa").checked ? "Da" : "Nu"}
+
+💰 Buget: ${document.getElementById("buget").value}
+
+💵 Buget personalizat: ${document.getElementById("bugetPersonalizat").value}
+
+📅 Termen: ${document.getElementById("termen").value}
+
+💶 Preț estimativ: ${pret.toLocaleString("ro-RO")} €
 
 📝 Alte detalii:
 
-${detalii}`;
+${document.getElementById("detalii").value}`;
 
-window.open(
+    window.open(
 
-"https://wa.me/40799415521?text=" + encodeURIComponent(mesaj),
+        "https://wa.me/40799415521?text=" + encodeURIComponent(mesaj),
 
-"_blank"
+        "_blank"
 
-);
-
-}
-function calculeazaPret() {
-
-let pret = 0;
-
-const dimensiune = document.getElementById("dimensiune").value;
-
-const panou = document.getElementById("panou").value;
-
-if (dimensiune === "3 × 2.4 m") pret = 2200;
-
-if (dimensiune === "4 × 2.4 m") pret = 2500;
-
-if (dimensiune === "6 × 2.4 m") pret = 2800;
-
-if (dimensiune === "6 × 3 m") pret = 3200;
-
-if (dimensiune === "8 × 2.4 m") pret = 3800;
-
-if (dimensiune === "10 × 3 m") pret = 5400;
-
-if (document.getElementById("baie").checked) pret += 600;
-
-if (document.getElementById("bucatarie").checked) pret += 800;
-
-if (document.getElementById("electric").checked) pret += 300;
-
-if (document.getElementById("ac").checked) pret += 500;
-
-if (document.getElementById("terasa").checked) pret += 900;
-
-if (panou === "60 mm") pret += 100;
-
-if (panou === "80 mm") pret += 300;
-
-if (panou === "100 mm") pret += 600;
-
-document.getElementById("pretFinal").innerHTML =
-
-"💰 Preț estimativ: <strong>" + pret.toLocaleString("ro-RO") + " €</strong>";
+    );
 
 }
