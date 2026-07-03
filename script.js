@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function calculeazaPret() {
 
-    let pret = Number(document.getElementById("dimensiune").value);
+    let pret = parseInt(document.getElementById("dimensiune").value);
 
-    pret += Number(document.getElementById("panou").value);
+pret += parseInt(document.getElementById("panou").value);
 
     if(document.getElementById("baie").checked) pret += 600;
 
@@ -99,5 +99,5 @@ ${document.getElementById("detalii").value}`;
         "_blank"
 
     );
-
+console.log(pret);
 }
