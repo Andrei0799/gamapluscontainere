@@ -109,3 +109,44 @@ window.open(
 );
 
 }
+function calculeazaPret() {
+
+let pret = 0;
+
+const dimensiune = document.getElementById("dimensiune").value;
+
+const panou = document.getElementById("panou").value;
+
+if (dimensiune === "3 × 2.4 m") pret = 2200;
+
+if (dimensiune === "4 × 2.4 m") pret = 2500;
+
+if (dimensiune === "6 × 2.4 m") pret = 2800;
+
+if (dimensiune === "6 × 3 m") pret = 3200;
+
+if (dimensiune === "8 × 2.4 m") pret = 3800;
+
+if (dimensiune === "10 × 3 m") pret = 5400;
+
+if (document.getElementById("baie").checked) pret += 600;
+
+if (document.getElementById("bucatarie").checked) pret += 800;
+
+if (document.getElementById("electric").checked) pret += 300;
+
+if (document.getElementById("ac").checked) pret += 500;
+
+if (document.getElementById("terasa").checked) pret += 900;
+
+if (panou === "60 mm") pret += 100;
+
+if (panou === "80 mm") pret += 300;
+
+if (panou === "100 mm") pret += 600;
+
+document.getElementById("pretFinal").innerHTML =
+
+"💰 Preț estimativ: <strong>" + pret.toLocaleString("ro-RO") + " €</strong>";
+
+}
